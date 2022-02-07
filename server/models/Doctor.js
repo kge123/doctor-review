@@ -1,7 +1,7 @@
 const { Schema, model}= require('mongoose')
 
 const DoctorSchema= new Schema({
-    doctorname:{
+    name:{
         type:String,
         require:true,
         unique:true,
