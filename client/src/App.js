@@ -6,7 +6,14 @@ import Home from "./components/Home";
 import Doctors from "./components/Doctors";
 import Signup from "./components/Signup";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import Login from './components/Login';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
+
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 
 function App() {
   const [page, setPage] = useState("Home");
@@ -17,12 +24,17 @@ function App() {
     }
     if (page === "Doctors") {
       return <Doctors />
-    } else {
+    }
+    if (page === "Login") {
+      return <Login />}
+     else {
       return <Home />;
     }
+    
   };
 
   return (
+    <ApolloProvider client={client}>
     <div>
       <Header />
       <Navbar>
@@ -32,6 +44,7 @@ function App() {
             <Nav.Link href="#home" onClick={() => setPage("Home")}> Home </Nav.Link>
             <Nav.Link href="#doctors" onClick={() => setPage("Doctors")}> Doctors </Nav.Link>
             <Nav.Link href="#signup" onClick={() => setPage("Signup")}> Sign Up</Nav.Link>
+            <Nav.Link href="#login" onClick={() => setPage("Login")}> Login</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -41,6 +54,7 @@ function App() {
       <Footer />
 
     </div>
+    </ApolloProvider>
   )
 }
 
