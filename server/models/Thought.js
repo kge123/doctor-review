@@ -20,7 +20,7 @@ username:{
 }
 })
 
-const Thought=mongoose.model('Thought',ThoughtSchema)
+const Thought=model('Thought',ThoughtSchema)
 
 module.export=Thought
 
