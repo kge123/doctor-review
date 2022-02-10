@@ -8,8 +8,8 @@ const resolvers={
        doctor: async(parent,{practice})=>{
            return await Doctor.find({practice})
         
-       },
-      
+       }, 
+  
     },
 
      Mutation:{
@@ -26,7 +26,25 @@ const resolvers={
                  {new:true}
             )
          }
-     }
-}
+     },
+  
+     login: async (parent, { email, password }) => {
+        const user = await User.findOne({ email });
+  
+        if (!user) {
+          throw new AuthenticationError('Incorrect credentials');
+        }
+  
+        const correctPw = await user.isCorrectPassword(password);
+  
+        if (!correctPw) {
+          throw new AuthenticationError('Incorrect credentials');
+        }
+  
+        const token = signToken(user);
+  
+        return { token, user };
+      }
+    }
 
 module.exports=resolvers
