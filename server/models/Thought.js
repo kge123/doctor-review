@@ -22,5 +22,5 @@ username:{
 
 const Thought=model('Thought',ThoughtSchema)
 
-module.export=Thought
+module.exports=Thought
 

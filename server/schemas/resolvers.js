@@ -3,9 +3,11 @@ const {Doctor, User, Thought}=require('../models')
 const {signToken}=require('../utils/auth')
 
 const resolvers={
+    
     Query:{
-       doctors: async()=>{
-           return await Doctor.findone(_id).populate('thoughts')
+       doctor: async(parent,{practice})=>{
+           return await Doctor.find({practice})
+        
        },
       
     },
