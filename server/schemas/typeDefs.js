@@ -3,7 +3,7 @@ const { gql }=require('apollo-server-express')
 const typeDefs=gql`
 
 type Doctor{
-    _id: ID
+    doctorId: ID
     name: String
     practice: String
     yearsofexperience: Int
@@ -30,8 +30,9 @@ type Auth{
 }
 
 type Query{
-    doctor:[Doctor]
-    doctors(_id:ID!, practice:String):Doctor
+    
+    
+    doctor( practice: String):[Doctor]
 }
 
 type Mutation{
