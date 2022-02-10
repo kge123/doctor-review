@@ -12,10 +12,8 @@ type Doctor{
 }
 type User{
     _id:ID
-    firstname: String
-    lastname: String
+    username: String
     email: String
-    password: String
 }
 
 type Thought{
@@ -36,11 +34,10 @@ type Query{
 }
 
 type Mutation{
-    adduser(firstname:String,lastname:String,email:String,password:String):Auth
-    updateUser(_id:ID,firstName: String, lastName: String, email: String, password: String): User
+    addUser(username :String!, email: String!, password: String!): Auth
     addthought(thoughttext:String!,username:String!):Doctor
     removethought(_id:ID!,thoughttext:String):Doctor
-    login(email: String!, password: String!): Auth
+    login(email:String!, password: String!): Auth
 }
 `
 

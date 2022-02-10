@@ -3,28 +3,33 @@ const mongoose = require ('mongoose');
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 
-const userSchema = new Schema({
-firstName:{
-    type: String,
-    required: true, 
-    trim: true
-},
-lastName:{
-    type: String,
-    required: true, 
-    trim: true
-}, 
-email:{
-    type:String, 
-    require:true, 
-    unique: true
-},
-password:{
-    type:String,
-    required: true,
-    minLength:5
-}
-});
+const userSchema = new Schema(
+    {
+        username: {
+          type: String,
+          required: true,
+          unique: true,
+        },
+        email: {
+          type: String,
+          required: true,
+          unique: true,
+          match: [/.+@.+\..+/, 'Must use a valid email address'],
+        },
+        password: {
+          type: String,
+          required: true,
+        },
+        // set savedBooks to be an array of data that adheres to the bookSchema
+        // savedBooks: [bookSchema],
+      },
+      // set this to use virtual below
+      {
+        toJSON: {
+          virtuals: true,
+        },
+      }
+    );
 
 userSchema.pre('save', async function(next){
     if(this.isNew|| this.isModified('password')){
