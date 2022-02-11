@@ -7,6 +7,7 @@ import Doctors from "./components/Doctors";
 import Signup from "./components/Signup";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import Login from './components/Login';
+import Searchbar from './components/Seachbar/Index';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 
@@ -27,6 +28,9 @@ function App() {
     }
     if (page === "Login") {
       return <Login />}
+    if (page ==="Searchbar"){
+      return <Searchbar/>
+    }
      else {
       return <Home />;
     }
@@ -45,13 +49,16 @@ function App() {
             <Nav.Link href="#doctors" onClick={() => setPage("Doctors")}> Doctors </Nav.Link>
             <Nav.Link href="#signup" onClick={() => setPage("Signup")}> Sign Up</Nav.Link>
             <Nav.Link href="#login" onClick={() => setPage("Login")}> Login</Nav.Link>
+            <Nav.Link href="#searchbar" onClick={() => setPage("Searchbar")}> searchbar</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
+     
 
       {render()}
-
+      
       <Footer />
+     
 
     </div>
     </ApolloProvider>
