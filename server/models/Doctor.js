@@ -5,7 +5,6 @@ const DoctorSchema= new mongoose.Schema({
     name:{
         type:String,
         require:true,
-        unique:true,
         trim: true
     },
     practice:{

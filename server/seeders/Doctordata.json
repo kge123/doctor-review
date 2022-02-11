@@ -1,64 +1,68 @@
-[{"name":"Roberto",
-    "practice":"oncology",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-},
-{"name":"Kevin",
-    "practice":"urology",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-},
-{"name":"josh",
-    "practice":"gastroenterology",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-},
-{"name":"jamie",
-    "practice":"oncology",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-},
-{"name":"claire J.",
-    "practice":"dentist",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-},
-{"name":"jill valentine",
-    "practice":"orthopedic",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-},
-{"name":"Rosie Williams",
-    "practice":"orthopedic",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-},
-{"name":"Rashid",
-    "practice":"orthopedic",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-},
-{"name":"Max Olivera",
-    "practice":"orthopedic",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-},{"name":"Fresh",
-    "practice":"orthopedic",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-},{"name":"Andrew",
-    "practice":"orthopedic",
-    "yearsofexperience":25,
-    "location":"Atlanta"
-    
-}]
+[
+  {
+    "name": "Roberto",
+    "practice": "oncology",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  },
+  {
+    "name": "Kevin",
+    "practice": "urology",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  },
+  {
+    "name": "josh",
+    "practice": "gastroenterology",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  },
+  {
+    "name": "jamie",
+    "practice": "oncology",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  },
+  {
+    "name": "claire J.",
+    "practice": "dentist",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  },
+  {
+    "name": "jill valentine",
+    "practice": "orthopedic",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  },
+  {
+    "name": "Rosie Williams",
+    "practice": "orthopedic",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  },
+  {
+    "name": "Rashid",
+    "practice": "orthopedic",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  },
+  {
+    "name": "Max Olivera",
+    "practice": "orthopedic",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  },
+  {
+    "name": "Fresh",
+    "practice": "orthopedic",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  },
+  {
+    "name": "Andrew",
+    "practice": "orthopedic",
+    "yearsofexperience": 25,
+    "location": "Atlanta"
+  }
+]
