@@ -29,6 +29,7 @@ type Auth{
 }
 
 type Query{
+    singledoctor(_id:ID):Doctor
     
     
     doctor: [Doctor]

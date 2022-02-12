@@ -1,4 +1,5 @@
 import './App.css';
+import {BrowserRouter as Router, Switch,Route } from 'react-router-dom'
 import React, { useState } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -7,7 +8,7 @@ import Doctors from "./components/Doctors";
 import Signup from "./components/Signup";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import Login from './components/Login';
-import Searchbar from './components/Seachbar/Index';
+import Reviews from './components/Reviews/Index';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 
@@ -17,25 +18,25 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const [page, setPage] = useState("Home");
+//   const [page, setPage] = useState("Home");
 
-  const render = () => {
-    if (page === "Signup") {
-      return <Signup />
-    }
-    if (page === "Doctors") {
-      return <Doctors />
-    }
-    if (page === "Login") {
-      return <Login />}
-    if (page ==="Searchbar"){
-      return <Searchbar/>
-    }
-     else {
-      return <Home />;
-    }
+  // const render = () => {
+  //   if (page === "Signup") {
+  //     return <Signup />
+  //   }
+  //   if (page === "Doctors") {
+  //     return <Doctors />
+  //   }
+  //   if (page === "Login") {
+  //     return <Login />}
+  //   if (page ==="Reviews"){
+  //     return <Reviews/>
+  //   }
+  //    else {
+  //     return <Home />;
+  //   }
     
-  };
+  // };
 
   return (
     <ApolloProvider client={client}>
@@ -44,18 +45,32 @@ function App() {
       <Navbar>
         <Container>
           <Navbar.Brand></Navbar.Brand>
+
           <Nav>
-            <Nav.Link href="#home" onClick={() => setPage("Home")}> Home </Nav.Link>
-            <Nav.Link href="#doctors" onClick={() => setPage("Doctors")}> Doctors </Nav.Link>
-            <Nav.Link href="#signup" onClick={() => setPage("Signup")}> Sign Up</Nav.Link>
-            <Nav.Link href="#login" onClick={() => setPage("Login")}> Login</Nav.Link>
-            <Nav.Link href="#searchbar" onClick={() => setPage("Searchbar")}> searchbar</Nav.Link>
+            
+            <Nav.Link href="/" > Home </Nav.Link>
+            <Nav.Link href="/Doctors" > Doctors </Nav.Link>
+            <Nav.Link href="/Signup"> Sign Up</Nav.Link>
+            <Nav.Link href="/Login" > Login</Nav.Link>
+            
           </Nav>
+
         </Container>
       </Navbar>
-     
+     <Router>
+       
+       <Switch>
+         <Route exact path='/' component={Home}/>
+         <Route exact path='/Doctors' component={Doctors}/>
+         <Route exact path='/Signup' component={Signup}/>
+         <Route exact path='/Login' component={Login}/>
+         <Route exact path='/Reviews/:id' component={Reviews}/>
 
-      {render()}
+     </Switch>
+     
+     </Router>
+
+      
       
       <Footer />
      
