@@ -7,6 +7,10 @@ const resolvers = {
     doctor: async (parent, args) => {
       return await Doctor.find();
     },
+    singledoctor: async( parent, args)=>{
+     
+      return await Doctor.findById(args._id)
+    }
   },
 
   Mutation: {
