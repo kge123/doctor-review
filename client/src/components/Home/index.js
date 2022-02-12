@@ -9,7 +9,7 @@ const Home = () => {
 
   const doctorData = data?.doctor || {};
 
-  console.log(doctorData);
+  // console.log(doctorData);
   //   const [searchInput, setSearchInput] = useState("");
 
   //   const handleFormSubmit = async (event) => {
