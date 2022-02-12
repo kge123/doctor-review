@@ -2,19 +2,19 @@
   {
     "name": "Roberto",
     "practice": "oncology",
-    "yearsofexperience": 25,
+    "yearsofexperience": 45,
     "location": "Atlanta"
   },
   {
     "name": "Kevin",
     "practice": "urology",
-    "yearsofexperience": 25,
+    "yearsofexperience": 15,
     "location": "Atlanta"
   },
   {
     "name": "josh",
     "practice": "gastroenterology",
-    "yearsofexperience": 25,
+    "yearsofexperience": 56,
     "location": "Atlanta"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "name": "jill valentine",
-    "practice": "orthopedic",
+    "practice": "Neurologists",
     "yearsofexperience": 25,
     "location": "Atlanta"
   },
@@ -43,7 +43,7 @@
   },
   {
     "name": "Rashid",
-    "practice": "orthopedic",
+    "practice": "Anesthesiologists",
     "yearsofexperience": 25,
     "location": "Atlanta"
   },
@@ -55,14 +55,14 @@
   },
   {
     "name": "Fresh",
-    "practice": "orthopedic",
+    "practice": "Cardiologist",
     "yearsofexperience": 25,
     "location": "Atlanta"
   },
   {
     "name": "Andrew",
-    "practice": "orthopedic",
-    "yearsofexperience": 25,
+    "practice": "Psychiatrists",
+    "yearsofexperience": 5,
     "location": "Atlanta"
   }
 ]
