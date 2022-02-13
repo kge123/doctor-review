@@ -48,7 +48,7 @@ const Home = () => {
 
   return (
     <Container>
-      <h1>Search for Doctors in Atlanta area</h1>
+      <h1>Search for Doctors in the Atlanta Metro area</h1>
       {/* <Form onSubmit={handleFormSubmit}>
         <Form.Row>
           <Col xs={12} md={8}>
