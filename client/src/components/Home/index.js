@@ -1,13 +1,13 @@
-import { Container, Col, Form, Button } from "react-bootstrap";
-import React, { useState } from "react";
-import { QUERY_DOCTOR } from "../../utils/queries";
-import { useQuery } from "@apollo/client";
+import { Container} from "react-bootstrap";
+import React from "react";
+// import { QUERY_DOCTOR } from "../../utils/queries";
+// import { useQuery } from "@apollo/client";
 
 const Home = () => {
-  const [searchedDoctors, setSearchedDoctors] = useState([]);
-  const { loading, data } = useQuery(QUERY_DOCTOR);
+  // const [searchedDoctors, setSearchedDoctors] = useState([]);
+  // const { loading, data } = useQuery(QUERY_DOCTOR);
 
-  const doctorData = data?.doctor || {};
+  // const doctorData = data?.doctor || {};
 
   // console.log(doctorData);
   //   const [searchInput, setSearchInput] = useState("");
@@ -47,8 +47,8 @@ const Home = () => {
   //   };
 
   return (
-    <Container fluid className="text-light bg-dark">
-      <h1>Search for Doctors in your area</h1>
+    <Container>
+      <h1>Search for Doctors in Atlanta area</h1>
       {/* <Form onSubmit={handleFormSubmit}>
         <Form.Row>
           <Col xs={12} md={8}>

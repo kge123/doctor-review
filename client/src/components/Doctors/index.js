@@ -1,9 +1,10 @@
-import { Container, Col, Row, Card,Button} from "react-bootstrap";
+import { Container, Card, Button } from "react-bootstrap";
 import { QUERY_DOCTOR } from "../../utils/queries";
-import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom';
+// import { useNavigate } from "react-router-dom";
+// import { Link } from 'react-router-dom';
 import { useQuery } from "@apollo/client";
 import React, {useState} from 'react';
+import Auth from '../../utils/auth';
 
 export default function Doctors() {
     const { loading, data } = useQuery(QUERY_DOCTOR);
@@ -35,9 +36,9 @@ export default function Doctors() {
               <Card.Text>Years of experience: {doctor.yearsofexperience}yrs</Card.Text>
               <Card.Text>Location: {doctor.location}</Card.Text>
                
-              
+              {Auth.loggedIn() && (
               <Button variant="primary" onClick={event=> window.location.href=`/Reviews/${doctor._id}`}>Go Home</Button>
-              
+              )}
             </Card.Body>
           </Card>
                 )}

@@ -1,7 +1,10 @@
-import { Container } from "react-bootstrap";
+import { Container, Image } from "react-bootstrap";
+import Banner from "../../images/MedicalBanner2.jpg";
 
 export default function Header() {
     return (
-        <Container>Doctor Review</Container>
+        <Container>
+            <Image fluid src={Banner}></Image>
+        </Container>
     )
 }
