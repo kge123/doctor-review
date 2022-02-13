@@ -1,43 +1,43 @@
 [
   {
     "name": "Roberto",
-    "practice": "oncology",
+    "practice": "Oncology",
     "yearsofexperience": 45,
     "location": "Atlanta"
   },
   {
     "name": "Kevin",
-    "practice": "urology",
+    "practice": "Urology",
     "yearsofexperience": 15,
     "location": "Atlanta"
   },
   {
-    "name": "josh",
-    "practice": "gastroenterology",
+    "name": "Josh",
+    "practice": "Gastroenterology",
     "yearsofexperience": 56,
     "location": "Atlanta"
   },
   {
-    "name": "jamie",
-    "practice": "oncology",
+    "name": "Jamie",
+    "practice": "Oncology",
     "yearsofexperience": 25,
     "location": "Atlanta"
   },
   {
-    "name": "claire J.",
-    "practice": "dentist",
+    "name": "Claire J.",
+    "practice": "Dentist",
     "yearsofexperience": 25,
     "location": "Atlanta"
   },
   {
-    "name": "jill valentine",
+    "name": "Jill Valentine",
     "practice": "Neurologists",
     "yearsofexperience": 25,
     "location": "Atlanta"
   },
   {
     "name": "Rosie Williams",
-    "practice": "orthopedic",
+    "practice": "Orthopedic",
     "yearsofexperience": 25,
     "location": "Atlanta"
   },
@@ -49,7 +49,7 @@
   },
   {
     "name": "Max Olivera",
-    "practice": "orthopedic",
+    "practice": "Orthopedic",
     "yearsofexperience": 25,
     "location": "Atlanta"
   },

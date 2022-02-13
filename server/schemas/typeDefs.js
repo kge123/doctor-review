@@ -7,7 +7,9 @@ type Doctor{
     name: String
     practice: String
     yearsofexperience: Int
-    location: String
+    location: String    
+    reviews: [Thought]
+
    
 }
 
@@ -22,6 +24,7 @@ type Thought{
     thoughttext: String
     createat: String
     username: User
+    
 }
 type Auth{
     token: ID
