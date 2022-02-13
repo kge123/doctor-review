@@ -1,11 +1,11 @@
 // import JSONDATA from './Doctordata.json'
-import { Container, Col, Row, Card,Button,} from "react-bootstrap";
+import { Container, Card, Button, Form } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import Form from 'react-bootstrap/Form'
+// import Form from 'react-bootstrap/Form'
 
 import {QUERY_SINGLEDOCTOR} from '../../utils/queries'
 import { useQuery } from '@apollo/client'
-import { useState } from "react";
+// import { useState } from "react";
 
 
 export default function Reviews(){

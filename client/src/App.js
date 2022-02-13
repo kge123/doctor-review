@@ -1,16 +1,18 @@
 import './App.css';
-import {BrowserRouter as Router, Switch,Route } from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import React, { useState } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Doctors from "./components/Doctors";
 import Signup from "./components/Signup";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, Modal, Tab } from "react-bootstrap";
 import Login from './components/Login';
 import Reviews from './components/Reviews/Index';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-
+import SignUpForm from './components/Signup';
+import LoginForm from './components/Login';
+import Auth from '../src/utils/auth';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -37,6 +39,7 @@ function App() {
   //   }
     
   // };
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <ApolloProvider client={client}>
@@ -44,16 +47,55 @@ function App() {
       <Header />
       <Navbar>
         <Container>
-          <Navbar.Brand></Navbar.Brand>
+          <Navbar.Brand>Atlanta Doctor Reviews</Navbar.Brand>
 
           <Nav>
             
             <Nav.Link href="/" > Home </Nav.Link>
             <Nav.Link href="/Doctors" > Doctors </Nav.Link>
-            <Nav.Link href="/Signup"> Sign Up</Nav.Link>
-            <Nav.Link href="/Login" > Login</Nav.Link>
-            
+            {/* <Nav.Link href="/Signup"> Sign Up</Nav.Link>
+            <Nav.Link href="/Login" > Login</Nav.Link> */}
+            {/* if user is logged in show saved books and logout */}
+            {Auth.loggedIn() ? (
+                <>
+                  <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
+                </>
+              ) : (
+                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+              )}
           </Nav>
+          {/* set modal data up */}
+      <Modal
+        size='lg'
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        aria-labelledby='signup-modal'>
+        {/* tab container to do either signup or login component */}
+        <Tab.Container defaultActiveKey='login'>
+          <Modal.Header closeButton>
+            <Modal.Title id='signup-modal'>
+              <Nav variant='pills'>
+                <Nav.Item>
+                  <Nav.Link eventKey='login'>Login</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Tab.Content>
+              <Tab.Pane eventKey='login'>
+                <LoginForm handleModalClose={() => setShowModal(false)} />
+              </Tab.Pane>
+              <Tab.Pane eventKey='signup'>
+                <SignUpForm handleModalClose={() => setShowModal(false)} />
+              </Tab.Pane>
+            </Tab.Content>
+          </Modal.Body>
+        </Tab.Container>
+      </Modal>
 
         </Container>
       </Navbar>
