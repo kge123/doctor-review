@@ -15,8 +15,13 @@ createat:{
 },
 user:{
     type: Schema.Types.ObjectId,
-    require: false,
+    require: true,
     ref:'User'
+},
+doctor:{
+    type: Schema.Types.ObjectId,
+    require: true,
+    ref: 'Doctor'
 }
 })
 
