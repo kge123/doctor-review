@@ -1,31 +1,30 @@
-const {Schema, model}=require('mongoose')
-const dateFormat=require('../utils/timeformat')
+const { Schema, model } = require("mongoose");
+const dateFormat = require("../utils/timeformat");
 
-const ThoughtSchema= new Schema({
-thoughtText:{
-    type:String,
-    require:true,
-    minlenght:1,
-    maxlenght:280
-},
-createat:{
-    type:Date,
-    default:()=>Date.now(),
-    get:(TimeStamp)=>dateFormat(TimeStamp)
-},
-user:{
+const thoughtSchema = new Schema({
+  thoughtText: {
+    type: String,
+    require: true,
+    minlenght: 1,
+    maxlenght: 280,
+  },
+  createat: {
+    type: Date,
+    default: () => Date.now(),
+    get: (TimeStamp) => dateFormat(TimeStamp),
+  },
+  user: {
     type: Schema.Types.ObjectId,
     require: true,
-    ref:'User'
-},
-doctor:{
+    ref: "User",
+  },
+  doctor: {
     type: Schema.Types.ObjectId,
     require: true,
-    ref: 'Doctor'
-}
-})
+    ref: "Doctor",
+  },
+});
 
-const Thought=model('Thought',ThoughtSchema)
+const Thought = model("Thought", thoughtSchema);
 
-module.exports=Thought
-
+module.exports = Thought;
