@@ -2,7 +2,7 @@ const {Schema, model}=require('mongoose')
 const dateFormat=require('../utils/timeformat')
 
 const ThoughtSchema= new Schema({
-thoughttext:{
+thoughtText:{
     type:String,
     require:true,
     minlenght:1,
@@ -13,9 +13,9 @@ createat:{
     default:()=>Date.now(),
     get:(TimeStamp)=>dateFormat(TimeStamp)
 },
-username:{
-    type:String,
-    require:true,
+user:{
+    type: Schema.Types.ObjectId,
+    require: false,
     ref:'User'
 }
 })
