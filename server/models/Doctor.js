@@ -24,7 +24,11 @@ const DoctorSchema= new mongoose.Schema({
         require: true
 
 
-    }
+    },
+    reviews:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Thought'
+    }]
 })
 
 const Doctor= mongoose.model('Doctor', DoctorSchema)

@@ -9,8 +9,6 @@ type Doctor{
     yearsofexperience: Int
     location: String    
     reviews: [Thought]
-
-   
 }
 
 type User{
@@ -21,9 +19,10 @@ type User{
 
 type Thought{
     _id: ID
-    thoughttext: String
+    thoughtText: String
     createat: String
-    username: User
+    user: User
+    doctorId: String
     
 }
 type Auth{
@@ -40,8 +39,7 @@ type Query{
 
 type Mutation{
     addUser(username :String!, email: String!, password: String!): Auth
-    addthought(thoughttext:String!,username:String!):Doctor
-    removethought(_id:ID!,thoughttext:String):Doctor
+    addThought(thoughtText:String!, doctorId:ID!): Thought
     login(email:String!, password: String!): Auth
 }
 `

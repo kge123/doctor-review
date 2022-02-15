@@ -8,12 +8,12 @@ import Auth from '../../utils/auth';
 
 export default function Doctors() {
     const { loading, data } = useQuery(QUERY_DOCTOR);
-    var doctorData = data?.doctor;
-    var [ updatedList, setUpdatedList] = useState(doctorData);
+    const doctorData = data?.doctor;
+    const [ updatedList, setUpdatedList] = useState([]);
     
     const handleChange = (e) => {
         
-        var uplist = doctorData.filter(function(item){
+        const uplist = doctorData.filter(function(item){
           return item.practice.toLowerCase().search(
             e.target.value.toLowerCase()) !== -1;
         });

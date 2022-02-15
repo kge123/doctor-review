@@ -4,13 +4,12 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    doctor: async (parent, args) => {
+    doctor: async (parent, args, context) => {
       return await Doctor.find();
     },
-    singledoctor: async( parent, args)=>{
-     
-      return await Doctor.findById(args._id)
-    }
+    singledoctor: async (parent, args) => {
+      return await Doctor.findById(args._id);
+    },
   },
 
   Mutation: {
@@ -37,15 +36,24 @@ const resolvers = {
 
       return { token, user };
     },
-    addthought: async (parent, { thoughttext, username }) => {
-      return Thought.create({ thoughttext, username });
-    },
-    removethought: async (parent, { _id, thoughttext }) => {
-      return Thought.findOneAndUpdate(
-        { _id: ID },
-        { $pull: { thoughttext: thoughttext } },
-        { new: true }
-      );
+    addThought: async (parent, args, context) => {
+      if (context.user) {
+        const thought = await Thought.create({
+          thoughtText: args.thoughtText,
+          user: context.user._id,
+          doctor: args.doctorId
+        });
+        
+
+        await Doctor.findOneAndUpdate({
+          _id: args.doctorId
+        }, 
+        {
+          $addToSet: { reviews: thought._id}
+        })
+        return thought;
+
+      }
     },
   },
 };
