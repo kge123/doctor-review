@@ -5,6 +5,7 @@ import { QUERY_DOCTOR } from "../../utils/queries";
 import { useQuery } from "@apollo/client";
 import React, { useState } from "react";
 import Auth from "../../utils/auth";
+import "./doctorstyle.css";
 
 export default function Doctors() {
   const { loading, data } = useQuery(QUERY_DOCTOR);
@@ -32,9 +33,11 @@ export default function Doctors() {
       />
       {updatedList &&
         updatedList.map((doctor) => (
-          <Card style={{ width: "18rem" }}>
+          <Card className="doctorstyle" style={{ width: "18rem" }}>
             <Card.Body>
-              <Card.Header as="h5">{doctor.name}</Card.Header>
+              <Card.Header className="header" as="h5">
+                {doctor.name}
+              </Card.Header>
 
               <Card.Text>Practice: {doctor.practice}</Card.Text>
               <Card.Text>
@@ -49,7 +52,7 @@ export default function Doctors() {
                     (window.location.href = `/Reviews/${doctor._id}`)
                   }
                 >
-                  Go Home
+                  Profile 💉
                 </Button>
               )}
             </Card.Body>

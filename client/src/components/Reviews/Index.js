@@ -8,6 +8,7 @@ import { useQuery, useMutation } from "@apollo/client";
 // import { useState } from "react";
 import Auth from "../../utils/auth";
 import { ADD_THOUGHT } from "../../utils/mutations";
+import './reviewstyle.css';
 
 export default function Reviews() {
   const [addThought, { error }] = useMutation(ADD_THOUGHT);
@@ -52,9 +53,9 @@ export default function Reviews() {
     <div>loading</div>
   ) : (
     <Container>
-      <Card style={{ width: "18rem" }}>
+      <Card className="review" style={{ width: "18rem" }}>
         <Card.Body>
-          <Card.Header as="h5">{doctor.name}</Card.Header>
+          <Card.Header className="header" as="h5">{doctor.name}</Card.Header>
 
           <Card.Text>Practice: {doctor.practice}</Card.Text>
           <Card.Text>
@@ -76,7 +77,7 @@ export default function Reviews() {
             </Form.Group>
             <Button variant="primary" type="submit">
               {" "}
-              Submit{" "}
+              Submit 💉{" "}
             </Button>
           </Form>
         </Card.Body>
