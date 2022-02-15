@@ -25,13 +25,17 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_THOUGHT = gql`
-  mutation addThought($thoughtText: String!) {
-    addThought(thoughtText: $thoughtText){
+  mutation addThought($thoughtText: String!, $doctorId:ID!) {
+    addThought(thoughtText: $thoughtText, doctorId: $doctorId){
       _id
       thoughtText
       doctorId
-      user
-      createat
+      createat 
+      user {
+        _id
+        username
+        email
+      }
     }
   }
 `;

@@ -37,20 +37,20 @@ const resolvers = {
       return { token, user };
     },
     addThought: async (parent, args, context) => {
-      console.log(thought)
       if (context.user) {
         const thought = await Thought.create({
           thoughtText: args.thoughtText,
           user: context.user._id,
+          doctor: args.doctorId
         });
         
 
-        // await Doctor.findOneAndUpdate({
-        //   _id: args.doctorId
-        // }, 
-        // {
-        //   $addToSet: { reviews: thought._id}
-        // })
+        await Doctor.findOneAndUpdate({
+          _id: args.doctorId
+        }, 
+        {
+          $addToSet: { reviews: thought._id}
+        })
         return thought;
 
       }

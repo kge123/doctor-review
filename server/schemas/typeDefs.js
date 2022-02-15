@@ -39,7 +39,7 @@ type Query{
 
 type Mutation{
     addUser(username :String!, email: String!, password: String!): Auth
-    addThought(thoughtText:String!): Thought
+    addThought(thoughtText:String!, doctorId:ID!): Thought
     login(email:String!, password: String!): Auth
 }
 `

@@ -22,7 +22,7 @@ export default function Reviews() {
   if (!loading){
   doctor = data?.singledoctor;
   console.log(doctor);
-  doctorId = doctor.id;
+  doctorId = doctor._id;
   }
   const [thoughtText, setThoughtText] = useState("");
 
