@@ -62,25 +62,25 @@
   {
     "name": "Andrew Scott",
     "practice": "Psychiatrists",
-    "yearsofexperience":16,
+    "yearsofexperience": 16,
     "location": "Decatur"
   },
   {
     "name": "Larry Bird",
     "practice": "Optometrist",
-    "yearsofexperience":42,
+    "yearsofexperience": 42,
     "location": "Alpharetta"
   },
   {
     "name": "Matthew Green",
     "practice": "Psychiatrist",
-    "yearsofexperience":18,
+    "yearsofexperience": 18,
     "location": "Alpharetta"
   },
   {
     "name": "Emma Scott",
     "practice": "Cardiologist",
-    "yearsofexperience":24,
+    "yearsofexperience": 24,
     "location": "Atlanta"
   },
   {
@@ -92,43 +92,43 @@
   {
     "name": "Jacob Carter",
     "practice": "Optometrist",
-    "yearsofexperience":19,
+    "yearsofexperience": 19,
     "location": "Atlanta"
   },
   {
     "name": "Elizabeth Phillips",
     "practice": "Immunologist",
-    "yearsofexperience":12,
+    "yearsofexperience": 12,
     "location": "Alpharetta"
   },
   {
     "name": "Mila Perez",
     "practice": "General Practitioner",
-    "yearsofexperience":15,
+    "yearsofexperience": 15,
     "location": "Marietta"
   },
   {
     "name": "Owen Young",
     "practice": "Optometrist",
-    "yearsofexperience":22,
+    "yearsofexperience": 22,
     "location": "Atlanta"
   },
   {
     "name": "Cameron Evans",
     "practice": "Optometrist",
-    "yearsofexperience":7,
+    "yearsofexperience": 7,
     "location": "Atlanta"
   },
   {
     "name": "Samuel Allen",
     "practice": "Optometrist",
-    "yearsofexperience":11,
+    "yearsofexperience": 11,
     "location": "Marietta"
   },
   {
     "name": "Caleb Baker",
     "practice": "Optometrist",
-    "yearsofexperience":8,
+    "yearsofexperience": 8,
     "location": "Atlanta"
   },
   {
@@ -158,7 +158,7 @@
   {
     "name": "Piper Wilson",
     "practice": "Optometrist",
-    "yearsofexperience":24,
+    "yearsofexperience": 24,
     "location": "Decatur"
   },
   {
@@ -212,7 +212,7 @@
   {
     "name": "Luke Flores",
     "practice": "Neurologist",
-    "yearsofexperience":25,
+    "yearsofexperience": 25,
     "location": "Atlanta"
   },
   {
@@ -230,7 +230,7 @@
   {
     "name": "Levi Nelson",
     "practice": "Dermatologist",
-    "yearsofexperience":13,
+    "yearsofexperience": 13,
     "location": "Atlanta"
   },
   {
@@ -242,7 +242,7 @@
   {
     "name": "Charles Jackson",
     "practice": "Hematologist",
-    "yearsofexperience":24,
+    "yearsofexperience": 24,
     "location": "Decatur"
   },
   {
@@ -266,7 +266,7 @@
   {
     "name": "Andrew Luck",
     "practice": "General Practitioner",
-    "yearsofexperience":16,
+    "yearsofexperience": 16,
     "location": "Marietta"
   },
   {
@@ -278,13 +278,13 @@
   {
     "name": "Cooper Kupp",
     "practice": "Dermatologist",
-    "yearsofexperience":12,
+    "yearsofexperience": 12,
     "location": "Decatur"
   },
   {
     "name": "Eleanor Cox",
     "practice": "Family Medicine Physician",
-    "yearsofexperience":17,
+    "yearsofexperience": 17,
     "location": "Roswell"
   },
   {
@@ -354,7 +354,6 @@
     "location": "Decatur"
   },
 
-
   {
     "name": "Ivy Johnson",
     "practice": "Pulmonologist",
@@ -415,7 +414,7 @@
     "yearsofexperience": 8,
     "location": "Atlanta"
   },
-  { 
+  {
     "name": "Noah Smith",
     "practice": "Dentist",
     "yearsofexperience": 10,
@@ -460,13 +459,13 @@
   {
     "name": "Victoria Smith",
     "practice": "Therapist",
-    "yearsofexperience":24,
+    "yearsofexperience": 24,
     "location": "Sandy Springs"
   },
   {
     "name": "Aaron Williams",
     "practice": "General Practitioner",
-    "yearsofexperience":36,
+    "yearsofexperience": 36,
     "location": "Kennesaw"
   },
   {
@@ -484,13 +483,13 @@
   {
     "name": "Avery Brown",
     "practice": "General Practitioner",
-    "yearsofexperience":6,
+    "yearsofexperience": 6,
     "location": "Kennesaw"
   },
   {
     "name": "Aria Miller",
     "practice": "General Practitioner",
-    "yearsofexperience":4,
+    "yearsofexperience": 4,
     "location": "Atlanta"
   },
   {
@@ -511,5 +510,4 @@
     "yearsofexperience": 18,
     "location": "Atlanta"
   }
-
 ]

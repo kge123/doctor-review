@@ -15,14 +15,13 @@ export default function Reviews() {
   const { loading, data } = useQuery(QUERY_SINGLEDOCTOR, {
     variables: { id },
   });
-  let doctor
-  let doctorId
+  let doctor;
+  let doctorId;
 
-
-  if (!loading){
-  doctor = data?.singledoctor;
-  console.log(doctor);
-  doctorId = doctor._id;
+  if (!loading) {
+    doctor = data?.singledoctor;
+    console.log(doctor);
+    doctorId = doctor._id;
   }
   const [thoughtText, setThoughtText] = useState("");
 
@@ -46,8 +45,7 @@ export default function Reviews() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    if (name)
-    setThoughtText(value);
+    if (name) setThoughtText(value);
   };
 
   return loading ? (
@@ -63,10 +61,10 @@ export default function Reviews() {
             Years of experience: {doctor.yearsofexperience}years
           </Card.Text>
           <Card.Text>Location: {doctor.location}</Card.Text>
-          <Card.Text>Reviews: {doctor.reviews}</Card.Text>
-          <Form 
-          onSubmit={handleFormSubmit}
-          >
+          <Card.Text>
+            Reviews: {doctor.reviews.map((review) => review.thoughtText)}
+          </Card.Text>
+          <Form onSubmit={handleFormSubmit}>
             <Form.Group className="mb-3" controlId="review">
               <Form.Control
                 type="text"
