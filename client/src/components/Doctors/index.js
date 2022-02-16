@@ -30,8 +30,8 @@ export default function Doctors() {
         onChange={handleChange}
       />
       {updatedList &&
-        updatedList.map((doctor) => (
-          <Card className="doctorstyle" style={{ width: "18rem" }}>
+        updatedList.map((doctor, index) => (
+          <Card key={index} className="doctorstyle" style={{ width: "18rem" }}>
             <Card.Body>
               <Card.Header className="header" as="h5">
                 {doctor.name}
