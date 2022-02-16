@@ -1,4 +1,4 @@
-import { Card, Container } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 export default function Footer() {
     return(

@@ -1,7 +1,5 @@
 import { Container, Card, Button } from "react-bootstrap";
 import { QUERY_DOCTOR } from "../../utils/queries";
-// import { useNavigate } from "react-router-dom";
-// import { Link } from 'react-router-dom';
 import { useQuery } from "@apollo/client";
 import React, { useState } from "react";
 import Auth from "../../utils/auth";
@@ -32,8 +30,8 @@ export default function Doctors() {
         onChange={handleChange}
       />
       {updatedList &&
-        updatedList.map((doctor) => (
-          <Card className="doctorstyle" style={{ width: "18rem" }}>
+        updatedList.map((doctor, index) => (
+          <Card key={index} className="doctorstyle" style={{ width: "18rem" }}>
             <Card.Body>
               <Card.Header className="header" as="h5">
                 {doctor.name}
