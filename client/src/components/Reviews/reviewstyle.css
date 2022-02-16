@@ -9,3 +9,12 @@
 .header{
     background-color: rgb(53, 128, 241);
 }
+
+.reviewbox{
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+    margin: 10px;
+    border-color: rgb(21, 21, 31);
+
+}
