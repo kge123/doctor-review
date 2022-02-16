@@ -38,7 +38,10 @@
   width:100%;
 }
 .navbar{
-  background-color: #b4d7e0;
+  background-color: #d9dadf;
+  margin-bottom: 50px;
+  font-family: 'Courier New', Courier, monospace;
+
 }
 .App-link {
   color: #61dafb;
@@ -53,7 +56,7 @@
   }
 }
 .card-footer {
-  position: relative;
+  position: absolute;
 left:0;
 bottom:0;
 width: 100%;
@@ -63,10 +66,12 @@ font-size: 20px;
 }
 h1{
   font-size: 45px;
-
+  margin-bottom: 50px;
+font-family: 'Courier New', Courier, monospace;
 }
 h2{
   font-size: 35px;
+  margin-bottom: 50px;
 }
 p{
   font-size: 20px;
