@@ -483,13 +483,13 @@
   },
   {
     "name": "Avery Brown",
-    "practice": "General Practitioner",
+    "practice": "Therapist",
     "yearsofexperience":6,
     "location": "Kennesaw"
   },
   {
     "name": "Aria Miller",
-    "practice": "General Practitioner",
+    "practice": "Dentist",
     "yearsofexperience":4,
     "location": "Atlanta"
   },
@@ -501,13 +501,13 @@
   },
   {
     "name": "Nora Wilson",
-    "practice": "General Practitioner",
+    "practice": "Therapist",
     "yearsofexperience": 16,
     "location": "Roswell"
   },
   {
     "name": "Ella Thomas",
-    "practice": "General Practitioner",
+    "practice": "Dentist",
     "yearsofexperience": 18,
     "location": "Atlanta"
   }
