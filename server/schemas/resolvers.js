@@ -8,7 +8,7 @@ const resolvers = {
       return await Doctor.find();
     },
     singledoctor: async (parent, args) => {
-      return await Doctor.findById(args._id);
+      return await Doctor.findById(args._id).populate("reviews");
     },
   },
 
@@ -41,18 +41,18 @@ const resolvers = {
         const thought = await Thought.create({
           thoughtText: args.thoughtText,
           user: context.user._id,
-          doctor: args.doctorId
+          doctor: args.doctorId,
         });
-        
 
-        await Doctor.findOneAndUpdate({
-          _id: args.doctorId
-        }, 
-        {
-          $addToSet: { reviews: thought._id}
-        })
+        await Doctor.findOneAndUpdate(
+          {
+            _id: args.doctorId,
+          },
+          {
+            $addToSet: { reviews: thought._id },
+          }
+        );
         return thought;
-
       }
     },
   },

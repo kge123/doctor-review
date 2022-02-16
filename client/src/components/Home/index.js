@@ -1,4 +1,4 @@
-import { Container} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import React from "react";
 // import { QUERY_DOCTOR } from "../../utils/queries";
 // import { useQuery } from "@apollo/client";

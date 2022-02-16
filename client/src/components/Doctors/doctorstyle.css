@@ -1,0 +1,11 @@
+.doctorstyle {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    margin: 10px;
+    border-color: rgb(21, 21, 31);
+    /* background-color: rgb(176, 179, 185); */
+}
+.header{
+    background-color: rgb(53, 128, 241);
+}
