@@ -23,6 +23,7 @@ export const QUERY_SINGLEDOCTOR = gql`
       reviews {
         _id
         thoughtText
+        createat
       }
     }
   }

@@ -62,9 +62,7 @@ export default function Reviews() {
             Years of experience: {doctor.yearsofexperience}years
           </Card.Text>
           <Card.Text>Location: {doctor.location}</Card.Text>
-          <Card.Text>
-            Reviews: {doctor.reviews.map((review) => review.thoughtText)}
-          </Card.Text>
+          
           <Form onSubmit={handleFormSubmit}>
             <Form.Group className="mb-3" controlId="review">
               <Form.Control
@@ -80,8 +78,20 @@ export default function Reviews() {
               Submit 💉{" "}
             </Button>
           </Form>
+          
         </Card.Body>
+        
       </Card>
+      <h1>Reviews:</h1>
+      {doctor.reviews.map((review) => (
+      <Card className="reviewbox">
+      <Card.Body>
+        <Card.Header>{review.createat}</Card.Header>
+        <Card.Text> {review.thoughtText}</Card.Text>
+      </Card.Body>
+    </Card>        
+      ))}
+
     </Container>
   );
 }
