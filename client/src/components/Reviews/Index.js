@@ -83,8 +83,8 @@ export default function Reviews() {
         
       </Card>
       <h1>Reviews:</h1>
-      {doctor.reviews.map((review) => (
-      <Card className="reviewbox">
+      {doctor.reviews.map((review, index) => (
+      <Card key={index} className="reviewbox">
       <Card.Body>
         <Card.Header>{review.createat}</Card.Header>
         <Card.Text> {review.thoughtText}</Card.Text>
