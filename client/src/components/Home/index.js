@@ -4,47 +4,7 @@ import React from "react";
 // import { useQuery } from "@apollo/client";
 
 const Home = () => {
-  // const [searchedDoctors, setSearchedDoctors] = useState([]);
-  // const { loading, data } = useQuery(QUERY_DOCTOR);
 
-  // const doctorData = data?.doctor || {};
-
-  // console.log(doctorData);
-  //   const [searchInput, setSearchInput] = useState("");
-
-  //   const handleFormSubmit = async (event) => {
-  //     event.preventDefault();
-
-  //     if (!searchInput) {
-  //       return false;
-  //     }
-
-  //     try {
-  //       // Dloop through the doctoData and filter out what the user is searching for? Are we setting one option to check against or is there multiple?
-  //       const response = await fetch(
-  //         `https://www.googleapis.com/books/v1/volumes?q=${searchInput}`
-  //       );
-
-  //       if (!response.ok) {
-  //         throw new Error("something went wrong!");
-  //       }
-
-  //       const { items } = await response.json();
-
-  //       const doctorData = items.map((doctor) => ({
-  //         doctorId: doctor.id,
-  //         name: doctor.volumeInfo.name,
-  //         practice: doctor.volumeInfo.practice,
-  //         yearsofexperience: doctor.yearsofexperience,
-  //         location: doctor.volumeInfo.location,
-  //       }));
-
-  //       setSearchedDoctors(doctorData);
-  //       setSearchInput("");
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
 
   return (
     <Container>
